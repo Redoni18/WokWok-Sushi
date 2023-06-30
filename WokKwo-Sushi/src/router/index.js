@@ -46,6 +46,15 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Category.vue'),
       meta: {requiresAuth: true}
+    },
+    {
+      path: '/messages',
+      name: 'messages',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Messages.vue'),
+      meta: {requiresAuth: true}
     }
   ]
 })

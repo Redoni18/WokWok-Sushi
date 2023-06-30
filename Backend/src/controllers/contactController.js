@@ -13,12 +13,8 @@ exports.get_contacts = function(req, res) {
 
 exports.insert_contacts = function(req, res) {
 
-    console.log(req.body)
-
     let newContacts = new Contacts({
-        contactName: req.body.contactName,
         contactEmail: req.body.contactEmail,
-        contactNumber: req.body.contactNumber,
         contactDescription: req.body.contactDescription
     });
 

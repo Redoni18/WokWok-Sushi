@@ -9,20 +9,43 @@
 
         <div class="contact__form-container">
             <div class="contact__form" data-aos="fade-up">
-                <input type="text" placeholder="Enter your email address"/>
-                <button>Send Message</button>
+                <input v-model="message.email" type="text" placeholder="Enter your email address"/>
+                <button @click="sendMessage">Send Message</button>
             </div>
 
             <div class="contact__form-message" data-aos="fade-up">
-                <textarea rows="8" type="text" placeholder="Enter your message"/>
+                <textarea v-model="message.messageContent" rows="8" type="text" placeholder="Enter your message"/>
             </div>
         </div>
     </section>
 </template>
 
 <script>
+import {sendMessage} from "../wokwok-sdk/contact"
 export default {
-
+  data() {
+    return {
+      message: {
+        email: null,
+        messageContent: null
+      }
+    }
+  },
+  methods: {
+    async sendMessage() {
+      try {
+        await sendMessage(this.message)
+      } catch (err) {
+        console.log(err)
+      } finally {
+        this.reset()
+      }
+    },
+    reset() {
+      this.message.email = null
+      this.message.messageContent = null
+    }
+  }
 }
 </script>
 

@@ -196,7 +196,7 @@ export default {
 }
 
 
-.category-table input, .category-container__input{
+.category-container__input{
     font-size: 19px;
     font-weight: 400;
     font-family: var(--plus-jakarta-sans);
@@ -213,7 +213,7 @@ export default {
 .category-container__input{
     height: 60px;
 }
-.category-table input::placeholder, .category-container__input::placeholder{
+.category-container__input::placeholder{
     color: #000;
     opacity: 0.5;
 }

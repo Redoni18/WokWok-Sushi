@@ -1,5 +1,5 @@
 <template>
-<transition name="modal-fade">
+<transition name="modal" mode="out-in">
   <div @click="close" class="modal-backdrop">
     <div @click.stop class="modal">
       <header class="modal-header">
@@ -42,7 +42,7 @@
   };
 </script>
 
-<style>
+<style scoped>
   .modal-backdrop {
     position: fixed;
     top: 0;
@@ -86,42 +86,40 @@
     font-size: 25px;
   }
 
-  .modal-footer {
+.modal-footer {
     border-top: 1px solid #eeeeee;
     flex-direction: row;
     gap: 10px;
     justify-content: flex-end;
     align-items: center;
-  }
+}
 
-  .modal-body {
+.modal-body {
     position: relative;
     padding: 20px 20px;
     overflow: auto;
-  }
-
-    .close-button{
-        padding: 10px 20px;
-        width: fit-content;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        border-radius: 46px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background: var(--primary-color);
-    }
-
-
-  .modal-fade-enter,
-  .modal-fade-leave-to {
-    opacity: 0;
 }
 
-  .modal-fade-enter-active,
-  .modal-fade-leave-active {
-    transition: opacity .2s ease;
-  }
+.close-button{
+    padding: 10px 20px;
+    width: fit-content;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 46px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--primary-color);
+}
+
+.tray-enter,
+.tray-leave-to { opacity: 0 }
+
+.tray-leave,
+.tray-enter-to { opacity: 1 }
+
+.tray-enter-active,
+.tray-leave-active { transition: opacity 300ms }
 </style>

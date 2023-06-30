@@ -12,9 +12,8 @@
             </div>
             <ul class="header__menu">
                 <li><router-link to="/category">Category</router-link></li>
-                <li><a href="#">Popular</a></li>
                 <li><a href="#about-us">Menu</a></li>
-                <li><a href="#about-us">Messages</a></li>
+                <li><router-link to="/messages">Messages</router-link></li>
                 <li class="last-menu-link" @click="leaveDashboard">Go Home</li>
             </ul>
 
