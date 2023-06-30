@@ -9,10 +9,10 @@
 
             </div>
             <ul class="header__menu">
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Recipes</a></li>
                 <li><a href="#about-us">About</a></li>
-                <li><a href="#">Order</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#recipes">Recipes</a></li>
             </ul>
 
             <ul class="header__menu-mobile">

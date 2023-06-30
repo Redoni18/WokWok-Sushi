@@ -27,14 +27,9 @@
 
         <div class="hero-content__testimonial">
           <div class="hero-content__customer flex-center">
-                <h4 ref="customerCount">{{ tweened.toFixed(0) }}<span>+</span></h4>
+                <h4 ref="customerCount">{{ tweened.toFixed(0) }}<span>k+</span></h4>
                 <p>Happy Customers</p>
             </div>
-
-          <div class="hero-content__review">
-            <img loading="lazy" src="@/assets/user.png" alt="user" />
-            <p>"One of the best Japanese delivery services"</p>
-          </div>
         </div>
       </div>
     </section>
@@ -46,7 +41,7 @@ import gsap from 'gsap';
 export default {
   data() {
     return {
-      happyCustomers: 2000,
+      happyCustomers: 10,
       tweened: 0
     };
   },
@@ -55,7 +50,7 @@ export default {
   },
   methods: {
     animateNumber() {
-      gsap.to(this, { duration: 1, tweened: Number(this.happyCustomers) || 0 })
+      gsap.to(this, { duration: 1.5, tweened: Number(this.happyCustomers) || 0 })
     }
   }
 };

@@ -5,7 +5,7 @@
         <input v-model="email" type="email" placeholder="Enter your email">
         <input v-model="password" type="password" placeholder="Enter your password">
 
-        <p v-for="errorMessage in errorMessages" :key="errorMessage">{{errorMessage}}</p>
+        <p>{{errorMessage}}</p>
 
         <button 
             @mouseover="updateButtonPosition"
@@ -25,7 +25,7 @@ export default {
             email: null,
             password: null,
             isAuthenticated: false,
-            errorMessages: [],
+            errorMessage: null,
             buttonPosition: { x: 0, y: 0 },
             isHovered: false,
             debounceTimer: null
@@ -43,21 +43,15 @@ export default {
         authenticateAdmin(){
             if(this.email === import.meta.env.VITE_APP_EMAIL && this.password === import.meta.env.VITE_APP_PASSWORD){
                 this.isAuthenticated = true
-                this.errorMessages = []
+                this.errorMessage = null
                 this.updateButtonPosition()
-            } else if (this.email !== import.meta.env.VITE_APP_EMAIL && this.password !== import.meta.env.VITE_APP_PASSWORD) {
+            } else if (this.email !== import.meta.env.VITE_APP_EMAIL || this.password !== import.meta.env.VITE_APP_PASSWORD) {
                 this.isAuthenticated = false
-                !this.errorMessages.includes('email and password') ? this.errorMessages.push("Incorrect email and password") : null;
-            } else if (this.email !== import.meta.env.VITE_APP_EMAIL) {
-                this.isAuthenticated = false
-                !this.errorMessages.includes('Email') ? this.errorMessages.push("Email is incorrect") : null
-            } else {
-                this.isAuthenticated = false
-                !this.errorMessages.includes('Password') ? this.errorMessages.push("Password is incorrect") : null
+                this.errorMessage = "Incorrect email or password"
             }
 
             setTimeout(() => {
-                this.errorMessages = [];
+                this.errorMessage = null;
             }, 3000);
         },
         updateButtonPosition() {

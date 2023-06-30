@@ -1,18 +1,21 @@
 <template>
-    <header v-if="adminIsAuthenticated && this.route === 'dashboard'">
+    <header>
         <nav class="header__nav">
             <div class="header__logo">
+                <router-link to="/dashboard">
                 <h4>Wok-Wok Administrator</h4>
                 <div class="header__logo-overlay">
 
                 </div>
+                </router-link>
 
             </div>
             <ul class="header__menu">
-                <li><router-link :to="{path: '/'}">Home</router-link></li>
-                <li><a href="#">Category</a></li>
+                <li><router-link to="/category">Category</router-link></li>
                 <li><a href="#">Popular</a></li>
                 <li><a href="#about-us">Menu</a></li>
+                <li><a href="#about-us">Messages</a></li>
+                <li class="last-menu-link" @click="leaveDashboard">Go Home</li>
             </ul>
 
             <ul class="header__menu-mobile">
@@ -25,16 +28,19 @@
 </template>
 
 <script>
-import { userExists } from "../helper/auth.js"
 export default {
-    data() {
-        return {
-            adminIsAuthenticated: userExists(),
-            route: null,
+    watch: {
+        '$route.path': function() {
+            if(this.$route.path === '/') {
+                this.leaveDashboard()
+            }
         }
     },
-    mounted() {
-        this.route = this.$route.name
+    methods: {
+        leaveDashboard() {
+            this.$emit('goHome')
+            this.$router.push({path: "/"})
+        }
     }
 }
 </script>
@@ -80,7 +86,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 64px;
+  gap: 40px;
 
   list-style: none;
 }
@@ -106,6 +112,13 @@ export default {
   gap: 20px;
 
   position: relative;
+}
+
+.header__menu .last-menu-link {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--primary-color);
 }
 
 </style>

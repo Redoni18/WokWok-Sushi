@@ -14,3 +14,9 @@ export function getLocalStorage() {
     var isAuthenticated = JSON.parse(localStorage.getItem('isAuthenticated'));
     return isAuthenticated;
 }
+
+export function removeUser() {
+    if(userExists) {
+        return localStorage.removeItem('isAuthenticated')
+    }
+}

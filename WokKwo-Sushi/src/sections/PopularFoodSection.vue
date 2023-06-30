@@ -2,68 +2,63 @@
   <section class="popular-foods" id="menu">
       <h2 class="popular-foods__title" data-aos="flip-up">Popular Food / 人気</h2>
 
-      <div class="popular-foods__filters sushi__hide-scrollbar" data-aos="fade-up">
-        <button class="popular-foods__filter-btn active">All</button>
-        <button class="popular-foods__filter-btn">
-          <img loading="lazy" src="@/assets/sushi-9.png" alt="sushi 9" />
-          Sushi
-        </button>
-        <button class="popular-foods__filter-btn">
-          <img loading="lazy" src="@/assets/sushi-8.png" alt="sushi 8" />
-          Ramen
-        </button>
-        <button class="popular-foods__filter-btn">
-          <img loading="lazy" src="@/assets/sushi-7.png" alt="sushi 7" />
-          Udon
-        </button>
-        <button class="popular-foods__filter-btn">
-          <img loading="lazy" src="@/assets/sushi-6.png" alt="sushi 6" />
-          Danggo
-        </button>
-      </div>
+      <div class="popular-foods_rest-content">
 
-      <div class="popular-foods__catalogue" data-aos="fade-up">
-        <article class="popular-foods__card">
-          <img loading="lazy" class="popular-foods__card-image" src="@/assets/sushi-12.png" alt="sushi-12" />
-          <h4 class="popular-foods__card-title">Chezu Sushi</h4>
+        <div class="popular-foods__filters sushi__hide-scrollbar" data-aos="fade-up">
+          <button class="popular-foods__filter-btn active">All</button>
+          <button class="popular-foods__filter-btn">
+            <img loading="lazy" src="@/assets/sushi-9.png" alt="sushi 9" />
+            Sushi
+          </button>
+          <button class="popular-foods__filter-btn">
+            <img loading="lazy" src="@/assets/sushi-8.png" alt="sushi 8" />
+            Ramen
+          </button>
+        </div>
 
-          <div class="popular-foods__card-details flex-between">
-            <div class="popular-foods__card-rating">
-              <img loading="lazy" src="@/assets/star.svg" alt="star" />
-              <p>4.9</p>
+        <div class="popular-foods__catalogue" data-aos="fade-up">
+          <article class="popular-foods__card">
+            <img loading="lazy" class="popular-foods__card-image" src="@/assets/sushi-12.png" alt="sushi-12" />
+            <h4 class="popular-foods__card-title">Chezu Sushi</h4>
+
+            <div class="popular-foods__card-details flex-between">
+              <div class="popular-foods__card-rating">
+                <img loading="lazy" src="@/assets/star.svg" alt="star" />
+                <p>4.9</p>
+              </div>
+
+              <p class="popular-foods__card-price">$21.00</p>
             </div>
+          </article>
 
-            <p class="popular-foods__card-price">$21.00</p>
-          </div>
-        </article>
-
-        <article class="popular-foods__card active-card">
-          <img loading="lazy" class="popular-foods__card-image" src="@/assets/sushi-11.png" alt="sushi-11" />
-          <h4 class="popular-foods__card-title">Original Sushi</h4>
-          
-          <div class="popular-foods__card-details flex-between">
-            <div class="popular-foods__card-rating">
-              <img loading="lazy" src="@/assets/star.svg" alt="star" />
-              <p>5.0</p>
-            </div>
+          <article class="popular-foods__card">
+            <img loading="lazy" class="popular-foods__card-image" src="@/assets/sushi-11.png" alt="sushi-11" />
+            <h4 class="popular-foods__card-title">Original Sushi</h4>
             
-            <p class="popular-foods__card-price">$19.00</p>
-          </div>
-        </article>
-
-        <article class="popular-foods__card">
-          <img loading="lazy" class="popular-foods__card-image" src="@/assets/sushi-10.png" alt="sushi-10" />
-          <h4 class="popular-foods__card-title">Ramen Legendo</h4>
-
-          <div class="popular-foods__card-details flex-between">
-            <div class="popular-foods__card-rating">
-              <img loading="lazy" src="@/assets/star.svg" alt="star" />
-              <p>4.7</p>
+            <div class="popular-foods__card-details flex-between">
+              <div class="popular-foods__card-rating">
+                <img loading="lazy" src="@/assets/star.svg" alt="star" />
+                <p>5.0</p>
+              </div>
+              
+              <p class="popular-foods__card-price">$19.00</p>
             </div>
+          </article>
 
-            <p class="popular-foods__card-price">$13.00</p>
-          </div>
-        </article>
+          <article class="popular-foods__card">
+            <img loading="lazy" class="popular-foods__card-image" src="@/assets/sushi-10.png" alt="sushi-10" />
+            <h4 class="popular-foods__card-title">Ramen Legendo</h4>
+
+            <div class="popular-foods__card-details flex-between">
+              <div class="popular-foods__card-rating">
+                <img loading="lazy" src="@/assets/star.svg" alt="star" />
+                <p>4.7</p>
+              </div>
+
+              <p class="popular-foods__card-price">$13.00</p>
+            </div>
+          </article>
+        </div>
       </div>
 
       <button class="popular-foods__button">
@@ -82,16 +77,25 @@ export default {
 
 <style scoped>
 .popular-foods {
-  padding: 30px;
-  height: 100vh;
+  padding: 64px;
+
   display: flex;
   flex-direction: column;
-
   background-color: var(--primary-color);
-  background-image: url("../assets/popular_bg.png");
+  background-image: url("../../assets/popular_bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  overflow: hidden;
+}
+
+.popular-foods_rest-content{
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .popular-foods__title {
@@ -105,11 +109,10 @@ export default {
 
 .popular-foods__filters {
   margin-top: 48px;
-  max-width: 100%;
-  overflow-x: hidden;
+  overflow-y: auto;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -124,13 +127,14 @@ export default {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 46px;
-
   font-size: 16px;
   font-weight: 300px;
   line-height: 25px;
   font-family: var(--plus-jakarta-sans);
   color: #fff;
   cursor: pointer;
+  justify-content: center;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .popular-foods__filter-btn img {
@@ -156,14 +160,15 @@ export default {
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 56px;
+  gap: 20px;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .popular-foods__button {
   width: fit-content;
 
   padding: 20px 30px;
-  margin: 60px auto 0;
+  margin: 80px auto 0;
 
   font-weight: 500;
   font-size: 18px;
@@ -198,6 +203,13 @@ export default {
   border-radius: 36px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.popular-foods__card:hover {
+  background: rgba(75, 75, 75, 0.034);
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .popular-foods__card-image {
@@ -247,12 +259,6 @@ export default {
   font-family: var(--plus-jakarta-sans);
   color: #fff;
 }
-
-.popular-foods__card.active-card {
-  background: #fff;
-  min-width: 340px;
-}
-
 .popular-foods__card.active-card .popular-foods__card-image {
   width: 214px;
   height: 160px;

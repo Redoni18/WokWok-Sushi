@@ -1,5 +1,5 @@
 <template>
-   <section class="contact flex-center" id="services">
+   <section class="contact flex-center" id="contact">
         <div class="contact__content">
             <h2 data-aos="flip-down">
                 Enjoy our services?
@@ -30,12 +30,7 @@ export default {
 .contact {
   padding: 40px 20px;
 
-  background-color: var(--primary-color);
-  background-image: url('../assets/subscribe_bg.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  overflow: hidden;
+  background-color: var(--color-creamson);
 }
 
 .contact__content{
@@ -44,6 +39,11 @@ export default {
     justify-content: center;
     align-items: flex-start;
     width: 45%;
+    background-image: url("../assets/about_bg2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
 }
 
 .contact h2 {
@@ -52,7 +52,7 @@ export default {
   font-weight: 600;
   line-height: 100px;
 
-  color: #fff;
+  color: #000;
 }
 
 .contact p {
@@ -63,7 +63,7 @@ export default {
 
   margin-top: 32px;
 
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(31, 31, 31, 0.8);
 }
 
 .contact__form-container{
@@ -80,7 +80,7 @@ export default {
   display: flex;
   gap: 10px;
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(64, 62, 62, 0.5);
   border-radius: 30px;
 }
 
@@ -91,7 +91,7 @@ export default {
     font-weight: 400px;
     font-family: var(--plus-jakarta-sans);
 
-    color: #fff;
+    color: #000;
     opacity: 0.5;
 
     background: transparent;
@@ -100,7 +100,7 @@ export default {
 }
 
 .contact__form-message textarea::placeholder {
-  color: #fff;
+  color: #000;
   opacity: 0.5;
 }
 
@@ -112,7 +112,7 @@ export default {
   font-weight: 400px;
   font-family: var(--plus-jakarta-sans);
 
-  color: #fff;
+  color: #000;
   opacity: 0.5;
 
   background: transparent;
@@ -121,7 +121,7 @@ export default {
 }
 
 .contact__form input::placeholder {
-  color: #fff;
+  color: #000;
   opacity: 0.5;
 }
 

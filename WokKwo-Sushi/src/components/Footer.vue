@@ -5,10 +5,10 @@
       </h3>
 
       <ul class="footer__nav">
+        <li><a href="#about-us">About</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#food">Food</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#recipes">Recipes</a></li>
         <li><router-link to="/administrator">Administrator</router-link></li>
       </ul>
 

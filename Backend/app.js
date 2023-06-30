@@ -1,12 +1,31 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const expressValidator = require('express-validator')
+const expressValidator = require('express-validator');
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUI = require("swagger-ui-express");
 
 require('dotenv').config();
 
+const swaggerOptions = {
+    swaggerDefinition: {
+        info: {
+            title: "Wok-Wok API",
+            description: "Wok-Wok Administrator API",
+            contact: {
+                name: "Redon Emini",
+            },
+            servers: ["http://localhost:8000"]
+        },
+    },
+    apis: ["./src/routes/*.js"]
+}
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+
 const app = express();
 
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 app.use(cors())
 app.use(expressValidator())
 app.use(bodyParser.json());

@@ -49,7 +49,7 @@ exports.upload_category = function (req, res) {
 
 exports.edit_category = function (req, res) {
 
-    if(!ObjectID.isValid(req.body._id)){
+    if(!ObjectID.isValid(req.params.id)){
         return res.status(400).send(`No record with given id:   ${req.body._id}`)
     }
 
@@ -62,7 +62,7 @@ exports.edit_category = function (req, res) {
         categoryName: req.body.categoryName,
     }
 
-    Categories.findByIdAndUpdate(req.body._id, {$set: updatedCategory}, {new: true}, (err, doc) => {
+    Categories.findByIdAndUpdate(req.params.id, {$set: updatedCategory}, {new: true}, (err, doc) => {
         if(!err){
             res.send(doc)
         }else{
