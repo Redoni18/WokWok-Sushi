@@ -3,8 +3,10 @@ const router = express.Router();
 
 const categoryRouter = require("./categoryRoutes");
 const contactRouter = require("./contactRoutes")
+const menuRouter = require("./menuRoutes")
 router.use(categoryRouter);
 router.use(contactRouter);
+router.use(menuRouter)
 //Stripe checkout session
 // router.post('/api/create-checkout-session/:id', productController.stripeCheckoutSession);
 // //Stripe webhook

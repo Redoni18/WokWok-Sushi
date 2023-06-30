@@ -1,6 +1,7 @@
 <template>
   <div>
     <AdminHeaderVue @goHome="goToHomepage" v-if="adminIsAuthenticated" />
+    <!-- <ParticleShooter /> -->
     <RouterView />
   </div>
 </template>
@@ -8,9 +9,11 @@
 <script>
 import AdminHeaderVue from './components/AdminHeader.vue'
 import { userExists, removeUser } from "./helper/auth.js"
+// import ParticleShooter from "./components/ParticleShooter.vue"
 export default {
   components: {
-    AdminHeaderVue
+    AdminHeaderVue,
+    // ParticleShooter
   },
   data() {
     return {
@@ -38,5 +41,7 @@ export default {
 </script>
 
 <style scoped>
-
+#app{
+  z-index: 1000;
+}
 </style>

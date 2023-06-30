@@ -6,7 +6,6 @@ const router = express.Router();
  * Controllers
  */
 const categoryController = require('../controllers/categoryController');
-// const pendingOrderController = require('../controllers/pendingOrderController')
 
 /**
  * @swagger
@@ -68,10 +67,13 @@ router.get('/api/category/:id', categoryController.get_category);
  *         schema:
  *           type: object
  *           properties:
- *             categoryName:
+ *             contactEmail:
+ *               type: string
+ *             contactDescription:
  *               type: string
  *           required:
- *             - categoryName
+ *             - contactEmail
+ *             - contactDescription
  *     responses:
  *       200:
  *         description: Returns the uploaded category object.

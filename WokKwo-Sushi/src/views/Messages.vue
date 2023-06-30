@@ -100,6 +100,8 @@ export default {
     cursor: pointer;
     background: var(--primary-color);
     margin: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 #edit-button{
@@ -112,6 +114,8 @@ export default {
     outline: none;
     cursor: pointer;
     background: var(--black-400);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .more-actions{
