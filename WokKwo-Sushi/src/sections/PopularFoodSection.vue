@@ -61,7 +61,7 @@
         </div>
       </div>
 
-      <button class="popular-foods__button">
+      <button @click="$router.push({ path: '/menu' })" class="popular-foods__button">
         Explore Food
         <img loading="lazy" src="@/assets/arrow-right.svg"  alt="arrow-right" />
       </button>

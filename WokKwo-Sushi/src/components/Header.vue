@@ -2,7 +2,7 @@
     <header>
         <nav class="header__nav">
             <div class="header__logo">
-                <h4>Wok-Wok</h4>
+                <router-link to="/"><h4>Wok-Wok</h4></router-link>
                 <div class="header__logo-overlay">
 
                 </div>

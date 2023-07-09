@@ -1,7 +1,7 @@
 <template>
   <footer class="footer flex-between">
       <h3 class="footer__logo">
-        <span>Wok - Wok</span>
+        <router-link to="/"><span>Wok - Wok</span></router-link>
       </h3>
 
       <ul class="footer__nav">
