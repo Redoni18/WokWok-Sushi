@@ -12,7 +12,7 @@
                 <li><a href="#about-us">About</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#recipes">Recipes</a></li>
+                <li><router-link to="/recipes">Recipes</router-link></li>
             </ul>
 
             <ul class="header__menu-mobile">

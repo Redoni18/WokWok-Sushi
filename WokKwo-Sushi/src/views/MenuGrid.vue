@@ -14,24 +14,7 @@
         </div>
 
         <div class="popular-foods__catalogue" data-aos="fade-up">
-          <article v-for="menuItem in menuItemList" :key="menuItem._id" class="popular-foods__card">
-            <img loading="lazy" class="popular-foods__card-image" :src="menuItem.imageUrl" alt="sushi-12" />
-            <h4 class="popular-foods__card-title">{{menuItem.menuItem}}</h4>
-
-            <VTooltip>
-                <div class="ingredients-container">
-                    <small class="ingredients-container__item" v-for="(itemIngredient, index) in menuItem.itemIngredients.slice(0, 3)" :key="new Date() + index">{{itemIngredient}}</small>
-                </div>
-
-
-                <template #popper>
-                    <p class="ingredients-container__tooltip">{{menuItem.itemIngredients.join(", ")}}</p>
-                </template>
-            </VTooltip>
-            <div class="popular-foods__card-details">
-              <p class="popular-foods__card-price">&euro;{{menuItem.itemPrice}}</p>
-            </div>
-          </article>
+          <MenuGridCardVue :menuData="menuItemList" />
         </div>
       </div>
     </section>
@@ -41,8 +24,11 @@
 <script>
 import {getMenuItems} from "../wokwok-sdk/menu"
 import { getAllCategories } from "../wokwok-sdk/categories"
-
+import MenuGridCardVue from '../components/MenuGridCard.vue'
 export default {
+  components: {
+    MenuGridCardVue
+  },
     data() {
         return {
             menuItemList: [],
@@ -102,15 +88,6 @@ export default {
   text-align: center;
 }
 
-.popular-foods__filters {
-  margin-top: 48px;
-  overflow-y: auto;
-
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
 .menu-filter__buttons{
     display: flex;
     justify-content: center;
@@ -150,83 +127,6 @@ export default {
   flex-wrap: wrap;
   gap: 20px;
   transition: background-color 0.1s ease-in-out;
-}
-
-.popular-foods__card {
-  padding: 38px;
-  width: 260px;
-  height: fit-content;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  border-radius: 36px;
-  background: rgba(254,240,222, 0.02);
-  border: 1px solid rgba(220, 218, 218, 1);
-  transition: background-color 0.2s ease-in-out;
-}
-
-.popular-foods__card:hover {
-  background: rgba(247, 229, 206, 0.5);
-  transition: background-color 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.popular-foods__card-image {
-  width: 200px;
-  height: fit-content;
-  object-fit: contain;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 12px;
-}
-
-.popular-foods__card-title {
-    margin-top: 20px;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  font-family: var(--playfair-display);
-  color: #000;
-  text-align: center;
-}
-
-.popular-foods__card-details {
-  width: 100%;
-  margin-top: 32px;
-  text-align: center;
-}
-
-.popular-foods__card-price {
-  font-size: 20px; 
-  font-weight: 500;
-  font-family: var(--plus-jakarta-sans);
-  color: #000;
-}
-
-.popular-foods__card.active-card .popular-foods__card-image {
-  width: 214px;
-  height: 160px;
-}
-
-.popular-foods__card.active-card .popular-foods__card-title {
-  color: var(--black-500);
-  font-size: 32px;
-}
-
-.popular-foods__card.active-card .popular-foods__card-rating img {
-  width: 32px;
-  height: 32px;
-}
-
-.popular-foods__card.active-card .popular-foods__card-rating p {
-  font-size: 24px;
-  color: var(--gray-100);
-}
-
-.popular-foods__card.active-card .popular-foods__card-price {
-  font-size: 24px;
-  color: var(--secondary-color)
 }
 
 .ingredients-container{

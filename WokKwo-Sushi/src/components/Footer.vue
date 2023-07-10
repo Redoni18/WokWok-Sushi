@@ -8,16 +8,18 @@
         <li><a href="#about-us">About</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#recipes">Recipes</a></li>
+        <li><router-link to="/recipes">Recipes</router-link></li>
         <li><router-link to="/administrator">Administrator</router-link></li>
       </ul>
 
       <ul class="footer__social">
+        <a href="https://www.instagram.com/wokwok.pr" target="_blank">
+          <li class="flex-center">
+            <img src="@/assets/instagram.svg" alt="instagram" />
+          </li>
+        </a>
         <li class="flex-center">
           <img src="@/assets/facebook.svg" alt="facebook" />
-        </li>
-        <li class="flex-center">
-          <img src="@/assets/instagram.svg" alt="instagram" />
         </li>
         <li class="flex-center">
           <img src="@/assets/twitter.svg" alt="twitter" />
