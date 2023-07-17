@@ -1,6 +1,6 @@
 <template>
     <section class="about-us" id="about-us">
-        <div class="about-us__image">
+        <div data-aos="fade-right" class="about-us__image">
             <div class="about-us__image-sushi3">
                 <img loading="lazy" src="@/assets/sushi-3.png" alt="sushi"/>
             </div>
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="about-us__content">
+        <div data-aos="fade-left" class="about-us__content">
             <p class="sushi__subtitle">About Us / 私たちに関しては</p>
             <h3 class="sushi__title">Noodle &amp; Sushi Bar</h3>
             <p class="sushi__description">We will continue to provide the experience of Omotenashi, the Japanese mindset of hospitality, with our shopping and dining for our customers.</p>

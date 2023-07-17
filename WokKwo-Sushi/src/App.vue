@@ -13,6 +13,7 @@ import AdminHeaderVue from './components/AdminHeader.vue'
 import { userExists, removeUser } from "./helper/auth.js"
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
+import AOS from "aos";
 // import ParticleShooter from "./components/ParticleShooter.vue"
 export default {
   components: {
@@ -34,6 +35,7 @@ export default {
     }
   },
   mounted() {
+    AOS.init();
     this.adminIsAuthenticated = userExists()
   },
   methods: {

@@ -1,12 +1,13 @@
 <template>
     <section class="hero">
       <div class="hero-image">
-        <img 
+        <img
+          data-aos="fade-up-right"
           src="@/assets/sushi-1.png"
           alt="sushi"
           loading="lazy"
         />
-        <h2>
+        <h2 data-aos="fade-right">
           日 <br />
           本 <br />
           食
@@ -16,7 +17,7 @@
       </div>
 
       <div class="hero-content">
-        <div class="hero-content-info">
+        <div class="hero-content-info" data-aos="fade-left">
           <h1>Feel the taste of Japanese food</h1>
           <p>Feel the taste of the most popular Japanese food from anywhere and anytime.</p>
 

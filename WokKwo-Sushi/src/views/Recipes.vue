@@ -1,5 +1,5 @@
 <template>
-<div class="recipes-container">
+<div class="recipes-container" data-aos="zoom-in">
     <h1 class="recipes-title">Check out some of our recipes / レシピ</h1>
     <RecipesCardVue :recipeItems="recipes" />
 </div>

@@ -1,10 +1,10 @@
 <template>
   <div class="details">
-    <div class="details-stater">
+    <div class="details-stater" data-aos="flip-up">
       <h1 class="details-title">{{recipeDetails?.title}}</h1>
       <p>{{recipeDetails?.description}}</p>
     </div>
-    <div class="recipe-ingredients">
+    <div data-aos="fade-down" class="recipe-ingredients">
       <Carousel :items-to-show="2.5" :wrap-around="true">
         <Slide v-for="slide in recipeDetails?.ingredients" :key="slide">
           <div class="carousel__item">
@@ -18,7 +18,7 @@
         </template>
       </Carousel>
     </div>
-    <div class="recipe-steps">
+    <div data-aos="zoom-in" class="recipe-steps">
       <h2 class="prepare-title">How to prepare this recipe?</h2>
       <div class="recipe-steps__content">
         <ol class="steps-list">

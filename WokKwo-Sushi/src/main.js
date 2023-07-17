@@ -18,6 +18,8 @@ import {
     Tooltip,
     Menu
 } from 'floating-vue'
+
+import 'aos/dist/aos.css'
   
 const app = createApp(App)
 app.directive('tooltip', VTooltip)
