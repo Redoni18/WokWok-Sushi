@@ -3,6 +3,22 @@ import californiaRoll from "../assets/california-roll.jpeg";
 import tonkotsuRamen from "../assets/tonkotsu-ramen.jpeg";
 import misoRamen from "../assets/miso-ramen.jpeg";
 
+import sushiRice from "../assets/sushi-rice.webp"
+import noriSeaWeed from "../assets/nori-seaweed.webp"
+import spicyMayo from "../assets/spicy-mayo.webp"
+import cucumber from "../assets/cucumber.webp"
+import freshTuna from "../assets/fresh-tuna.webp"
+import imitationCrab from "../assets/imitation-crab.jpg"
+import avocado from "../assets/avocado.webp"
+import porkBones from "../assets/pork-bones.webp"
+import ramenNoodles from "../assets/ramen-noodles.jpeg"
+import chashuPork from "../assets/chashu-pork.jpeg"
+import softBoiledEggs from "../assets/soft-boiled-eggs.webp"
+import greenOnions from "../assets/green-onions.jpeg"
+import misoPaste from "../assets/miso-paste.webp"
+import slicedPork from "../assets/sliced-pork.jpeg"
+import corn from "../assets/corn.jpeg"
+import beanSprouts from "../assets/bean-sprouts.webp"
 
 export const recipes = [
     {
@@ -11,11 +27,11 @@ export const recipes = [
       "description": "A delicious and spicy sushi roll with fresh tuna.",
       "image": spicyTunaRollImage,
       "ingredients": [
-        { "name": "Sushi Rice", "image": "https://example.com/sushi-rice.jpg" },
-        { "name": "Fresh Tuna", "image": "https://example.com/fresh-tuna.jpg" },
-        { "name": "Nori Seaweed", "image": "https://example.com/nori-seaweed.jpg" },
-        { "name": "Spicy Mayo", "image": "https://example.com/spicy-mayo.jpg" },
-        { "name": "Cucumber", "image": "https://example.com/cucumber.jpg" }
+        { "name": "Sushi Rice", "image": sushiRice },
+        { "name": "Fresh Tuna", "image": freshTuna },
+        { "name": "Nori Seaweed", "image": noriSeaWeed },
+        { "name": "Spicy Mayo", "image": spicyMayo},
+        { "name": "Cucumber", "image": cucumber }
       ],
       "steps": [
         "Prepare sushi rice.",
@@ -26,7 +42,7 @@ export const recipes = [
         "Roll tightly and cut into bite-sized pieces.",
         "Serve and enjoy!"
       ],
-      "youtubeVideo": "https://www.youtube.com/watch?v=abc123"
+      "youtubeVideo": "https://www.youtube.com/embed/Yhv4bYA3Rfk"
     },
     {
       "id": 2,
@@ -34,11 +50,11 @@ export const recipes = [
       "description": "A classic sushi roll with imitation crab, avocado, and cucumber.",
       "image": californiaRoll,
       "ingredients": [
-        { "name": "Sushi Rice", "image": "https://example.com/sushi-rice.jpg" },
-        { "name": "Imitation Crab", "image": "https://example.com/imitation-crab.jpg" },
-        { "name": "Avocado", "image": "https://example.com/avocado.jpg" },
-        { "name": "Cucumber", "image": "https://example.com/cucumber.jpg" },
-        { "name": "Nori Seaweed", "image": "https://example.com/nori-seaweed.jpg" }
+        { "name": "Sushi Rice", "image": sushiRice },
+        { "name": "Imitation Crab", "image": imitationCrab},
+        { "name": "Avocado", "image": avocado },
+        { "name": "Cucumber", "image": cucumber },
+        { "name": "Nori Seaweed", "image": noriSeaWeed }
       ],
       "steps": [
         "Prepare sushi rice.",
@@ -49,7 +65,7 @@ export const recipes = [
         "Roll tightly and cut into bite-sized pieces.",
         "Serve and enjoy!"
       ],
-      "youtubeVideo": "https://www.youtube.com/watch?v=def456"
+      "youtubeVideo": "https://www.youtube.com/embed/_P7f0RWg3F0"
     },
     {
       "id": 3,
@@ -57,11 +73,11 @@ export const recipes = [
       "description": "A rich and flavorful pork-based ramen soup.",
       "image": tonkotsuRamen,
       "ingredients": [
-        { "name": "Pork Bones", "image": "https://example.com/pork-bones.jpg" },
-        { "name": "Ramen Noodles", "image": "https://example.com/ramen-noodles.jpg" },
-        { "name": "Chashu Pork", "image": "https://example.com/chashu-pork.jpg" },
-        { "name": "Soft-Boiled Egg", "image": "https://example.com/soft-boiled-egg.jpg" },
-        { "name": "Green Onions", "image": "https://example.com/green-onions.jpg" }
+        { "name": "Pork Bones", "image": porkBones },
+        { "name": "Ramen Noodles", "image": ramenNoodles },
+        { "name": "Chashu Pork", "image": chashuPork },
+        { "name": "Soft-Boiled Egg", "image": softBoiledEggs },
+        { "name": "Green Onions", "image": greenOnions }
       ],
       "steps": [
         "Simmer pork bones in water for several hours to create a flavorful broth.",
@@ -72,7 +88,7 @@ export const recipes = [
         "Top with chashu pork, soft-boiled egg, and green onions.",
         "Serve and enjoy!"
       ],
-      "youtubeVideo": "https://www.youtube.com/watch?v=ghi789"
+      "youtubeVideo": "https://www.youtube.com/embed/2fBs5MNlK2s"
     },
     {
       "id": 4,
@@ -80,11 +96,11 @@ export const recipes = [
       "description": "A savory ramen soup with miso paste and toppings.",
       "image": misoRamen,
       "ingredients": [
-        { "name": "Miso Paste", "image": "https://example.com/miso-paste.jpg" },
-        { "name": "Ramen Noodles", "image": "https://example.com/ramen-noodles.jpg" },
-        { "name": "Sliced Pork", "image": "https://example.com/sliced-pork.jpg" },
-        { "name": "Corn", "image": "https://example.com/corn.jpg" },
-        { "name": "Bean Sprouts", "image": "https://example.com/bean-sprouts.jpg" }
+        { "name": "Miso Paste", "image": misoPaste },
+        { "name": "Ramen Noodles", "image": ramenNoodles },
+        { "name": "Sliced Pork", "image": slicedPork },
+        { "name": "Corn", "image": corn },
+        { "name": "Bean Sprouts", "image": beanSprouts }
       ],
       "steps": [
         "Cook ramen noodles according to package instructions.",
@@ -95,7 +111,7 @@ export const recipes = [
         "Top with sliced pork, corn, and bean sprouts.",
         "Serve and enjoy!"
       ],
-      "youtubeVideo": "https://www.youtube.com/watch?v=jkl789"
+      "youtubeVideo": "https://www.youtube.com/embed/IKlIYkX7W8U"
     }
   ];
   

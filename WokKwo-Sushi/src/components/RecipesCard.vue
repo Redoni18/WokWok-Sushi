@@ -86,12 +86,11 @@ export default {
     border-radius: 12px;
     width: fit-content;
     line-height: 3rem;
-
 }
 
 .popular-foods__card-image:hover + .card-content .popular-foods__card-title {
     background: var(--primary-color);
-    color: var(--black-200);
+    color: white;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
