@@ -1,9 +1,9 @@
 <template>
   <div>
     <AdminHeaderVue @goHome="goToHomepage" v-if="adminIsAuthenticated" />
-    <Header v-if="!adminIsAuthenticated && $route.path !== '/administrator'"></Header>
+    <Header v-if="!adminIsAuthenticated && $route.path !== '/administrator'" />
     <RouterView />
-    <Footer v-if="!adminIsAuthenticated && $route.path !== '/administrator'"></Footer>
+    <Footer v-if="!adminIsAuthenticated && $route.path !== '/administrator'" />
   </div>
 </template>
 
