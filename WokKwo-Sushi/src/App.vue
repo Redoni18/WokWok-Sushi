@@ -2,7 +2,6 @@
   <div>
     <AdminHeaderVue @goHome="goToHomepage" v-if="adminIsAuthenticated" />
     <Header v-if="!adminIsAuthenticated && $route.path !== '/administrator'"></Header>
-    <!-- <ParticleShooter /> -->
     <RouterView />
     <Footer v-if="!adminIsAuthenticated && $route.path !== '/administrator'"></Footer>
   </div>
@@ -14,13 +13,11 @@ import { userExists, removeUser } from "./helper/auth.js"
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
 import AOS from "aos";
-// import ParticleShooter from "./components/ParticleShooter.vue"
 export default {
   components: {
     AdminHeaderVue,
     Header,
-    Footer
-    // ParticleShooter
+    Footer,
   },
   data() {
     return {
@@ -49,7 +46,4 @@ export default {
 </script>
 
 <style scoped>
-#app{
-  z-index: 1000;
-}
 </style>

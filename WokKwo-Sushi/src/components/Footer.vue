@@ -9,6 +9,7 @@
         <li><a href="#menu">Menu</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><router-link to="/recipes">Recipes</router-link></li>
+        <li><router-link to="/particles">Particles</router-link></li>
         <li><router-link to="/administrator">Administrator</router-link></li>
       </ul>
 
